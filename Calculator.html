@@ -3,22 +3,31 @@
 
 <body>
 
-<h1> Calculator</h1>
- <script>
-    var num1 = 396;
-    var num2 = 9;
-    var add = num1 + num2;
-var sub = num1 - num2;
-var mul = num1 * num2;
-var div = num1 / num2;
-document.getElementById("add").innerHTML =
-"The added value is: " + add;
-document.getElementById("sub").innerHTML =
-"The subtracted value is: " + sub;
-document.getElementById("mul").innerHTML =
-"The multiplied value is: " + mul;
-document.getElementById("div").innerHTML =
-"The divided value is: " + div;
+<h1>Calculator</h1>
+<h3> A: 396 + 9 = ?<br>
+     B: 396 - 9 = ?<br>
+      C: 396 * 9 = ?<br>
+       D: 396 / 9 = ?<br>
+</h3>
+
+<p id="add"></p>
+<p id="sub"></p>
+<p id="mul"></p>
+<p id="div"></p>
+
+<script>
+var x = 396;
+var y = 9;
+
+var add = x + y;
+var sub = x - y;
+var mul = x * y;
+var div = x / y;
+
+document.getElementById("add").innerHTML = "The added value is: " + add;
+document.getElementById("sub").innerHTML = "The subtracted value is: " + sub;
+document.getElementById("mul").innerHTML = "The multiplied value is: " + mul;
+document.getElementById("div").innerHTML = "The divided value is: " + div;
 </script>
 
 </body>
