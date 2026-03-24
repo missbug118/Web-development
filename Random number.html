@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Simple Project</h2>
+
+<p id="result"></p>
+<p id="random"></p>
+<p id="rounded"></p>
+<p id="date"></p>
+
+<script>
+    function findMax(){
+        var i;
+        var max = 0;
+        for(i = 0; i < arguments.length; i++){
+            if (arguments[i] > max){
+                max = arguments[i];
+            }
+        }
+        return max;
+    }
+
+    document.getElementById("result").innerHTML =
+        "Max number is " + findMax(4, 5, 6);
+
+    var text = "";
+    var i;
+    for(i = 0; i < 5; i++){
+        text += Math.round(Math.random())+ " ";
+    }
+
+    document.getElementById("random").innerHTML =
+        "Random numbers: " + text;
+
+    var r = Math.random() * 50;
+    document.getElementById("rounded").innerHTML =
+        "Rounded random number: " + Math.round(r);
+
+    document.getElementById("date").innerHTML =
+        "Date: " + new Date().toDateString();
+</script>
+
+</body>
+</html>

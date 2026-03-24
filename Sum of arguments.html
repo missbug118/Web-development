@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title> Sum of arguments</title>
+
+    </head>
+
+    <h2> The sum of 5,10,15,20 is...</h2>
+    <script>
+
+function findSum(){
+    var i;
+    var sum = 0;
+    for(i = 0; i < arguments.length; i++){
+        sum = sum + arguments[i];
+    }
+    return sum;
+}
+
+document.write(findSum(5, 10, 15, 20));
+
+</script>
+
+</html>
