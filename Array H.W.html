@@ -1,0 +1,50 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Object and Array Project</title>
+</head>
+<body>
+
+<h1>JavaScript Project: Object and Array</h1>
+
+<h3>Info</h3>
+<p id="obj"></p>
+
+<h3>Fruits</h3>
+<p id="array"></p>
+
+<h3>All fruits</h3>
+<p id="join"></p>
+
+<h3>Pop!</h3>
+<p id="pop"></p>
+
+<script>
+    var student = {
+        name: "Ali",
+        age: 13,
+        grade: 7
+    };
+
+    document.getElementById("obj").innerHTML =
+        "Student Name: " + student.name +
+        "<br>Age: " + student.age +
+        "<br>Grade: " + student.grade;
+
+    var fruits = ["Apple", "Banana", "Mango", "Orange"];
+
+    document.getElementById("array").innerHTML =
+        "First Fruit: " + fruits[0] +
+        "<br>Second Fruit: " + fruits[1];
+
+    document.getElementById("join").innerHTML =
+        "All Fruits: " + fruits.join(", ");
+
+    fruits.pop();
+
+    document.getElementById("pop").innerHTML =
+        "After Pop: " + fruits.join(", ");
+</script>
+
+</body>
+</html>
