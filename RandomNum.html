@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Number Generator</title>
+</head>
+<body>
+
+<h2>Random Numbers Using Classes</h2>
+<p id="details"></p>
+
+<script>
+
+class Generator {
+    constructor(limit) {
+        this.limit = limit;
+        this.count = 0;
+        this.arr = [];
+    }
+
+    createNumbers() {
+        while(this.count < this.limit) {
+            let n = Math.floor(Math.random() * 100);
+            this.arr.push(n);
+            this.count++;
+        }
+        return this.arr;
+    }
+}
+
+class Display extends Generator {
+    constructor(limit, text) {
+        super(limit);
+        this.text = text;
+    }
+
+    showNumbers() {
+        let nums = this.createNumbers();
+        return this.text + ": " + nums.join(", ");
+    }
+}
+
+let data = new Display(5, "Generated Numbers");
+document.getElementById("details").innerHTML = data.showNumbers();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Classes Project</title>
+</head>
+<body>
+
+<h2>Rumaysa info</h2>
+<p id="output"></p>
+
+<script>
+
+class Student {
+    constructor(name, grade) {
+        this.name = name;
+        this.grade = grade;
+    }
+
+    displayInfo() {
+        return "Student Name: " + this.name + ", Class: " + this.grade;
+    }
+
+    static school() {
+        return "School Name: APSACS";
+    }
+}
+
+class Monitor extends Student {
+    constructor(name, grade, duty) {
+        super(name, grade);
+        this.duty = duty;
+    }
+
+    showAll() {
+        return this.displayInfo() + ", Duty: " + this.duty;
+    }
+}
+
+let student1 = new Monitor("Rumaysa", "7", "Class Monitor");
+
+document.getElementById("output").innerHTML =
+    student1.showAll() + "<br>" + Student.school();
+
+</script>
+
+</body>
+</html>
