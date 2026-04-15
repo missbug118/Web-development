@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Error Check</title>
+</head>
+
+<body>
+<h2> Rumaysa exam result</h2>
+<p> CONGRATS!🎉</p>
+
+<p id="error_message"></p>
+
+<script>
+    try {
+        alert("Ready for your exam results?... Please wait 📚");
+        let marks = Marks();
+    }
+    catch(err) {
+        document.getElementById("error_message").innerHTML = "⚠️ There is a problem: " + err.message;
+    }
+</script>
+
+</body>
+</html>

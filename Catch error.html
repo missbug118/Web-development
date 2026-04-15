@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Error Handling Project</title>
+</head>
+<body>
+
+<h2>Error</h2>
+
+<p id="error_message" style="color:red;"></p>
+
+<script>
+try {
+    alert("Welcome guest!");
+    
+    let result = calculateScore();
+}
+catch(err) {
+    document.getElementById("error_message").innerHTML = "Error: " + err.message;
+}
+</script>
+
+</body>
+</html>
