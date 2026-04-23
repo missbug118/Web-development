@@ -1,0 +1,42 @@
+<html>
+<body>
+
+<button onclick="calculatePerimeter()">Calculate Perimeter</button>
+
+<script>
+function calculatePerimeter() {
+
+var choice = prompt("Welcome to Perimeter Calculator.\nPlease Enter your Choice.\n1. Rectangle\n2. Triangle\n3. Circle\n4. Square");
+
+if (choice == '1') {
+    var l = prompt('Enter the Length')
+    var w = prompt('Enter the Width')
+    var result = 2 * (Number(l) + Number(w))
+    alert('The Perimeter is ' + result)
+}
+
+if (choice == '2') {
+    var a = prompt('Enter side a')
+    var b = prompt('Enter side b')
+    var c = prompt('Enter side c')
+    var result = Number(a) + Number(b) + Number(c)
+    alert('The Perimeter is ' + result)
+}
+
+if (choice == '3') {
+    var r = prompt('Enter the Radius')
+    var result = 2 * 3.14 * Number(r)
+    alert('The Perimeter (Circumference) is ' + result)
+}
+
+if (choice == '4') {
+    var s = prompt('Enter the side')
+    var result = 4 * Number(s)
+    alert('The Perimeter is ' + result)
+}
+
+}
+</script>
+
+</body>
+</html>
