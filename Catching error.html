@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<h2>Simple Error Check</h2>
+
+<button onclick="check()">Click Me</button>
+
+<p id="out"></p>
+
+<script>
+function check() {
+    try {
+        let x = y + 5;   
+            document.getElementById("out").innerHTML = x;
+    }
+    catch(err) {
+        document.getElementById("out").innerHTML = "Error occurred!";
+    }
+}
+</script>
+
+</body>
+</html>
+```
