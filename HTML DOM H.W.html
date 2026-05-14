@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="title">Welcome to DOM Nodes</h1>
+
+    <button onclick="showText()">Click Me</button>
+
+    <p id="para1"></p>
+    <p id="para2"></p>
+
+    <script>
+        function showText() {
+            var text = document.getElementById("title").firstChild.nodeValue;
+
+            document.getElementById("para1").innerHTML = text;
+            document.getElementById("para2").innerHTML = text;
+        }
+    </script>
+
+</body>
+
+</html>
