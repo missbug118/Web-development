@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<body style="font-family: Arial; text-align:center;">
+
+<h1>Handle Errors in JS</h1>
+<p id="demo"></p>
+
+<script>
+    var numbers = [10, 20, 30];
+
+    try {
+        document.write(numbers[5].toUpperCase());
+    }
+    catch(error) {
+        document.getElementById("demo").innerHTML =
+        "Error Caught: " + error.message;
+    }
+</script>
+
+</body>
+</html>

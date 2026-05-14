@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Map and Arrange an Array</h1>
+
+    <button onclick="ascending()">Ascending Order</button>
+    <button onclick="descending()">Descending Order</button>
+
+    <p id="result"></p>
+
+    <script>
+
+        var numbers = [2, 5, 8, 1, 4];
+
+        var mapped = numbers.map(function (num) {
+            return num * 3;
+        });
+
+        function ascending() {
+
+            var asc = [...mapped];
+
+            asc.sort(function (a, b) {
+                return a - b;
+            });
+
+            document.getElementById("result").innerHTML =
+                "Ascending: " + asc;
+        }
+
+        function descending() {
+
+            var desc = [...mapped];
+
+            desc.sort(function (a, b) {
+                return b - a;
+            });
+
+            document.getElementById("result").innerHTML =
+                "Descending: " + desc;
+        }
+
+    </script>
+
+</body>
+
+</html>
