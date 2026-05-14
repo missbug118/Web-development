@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Helvetica, sans-serif;
+            margin-top: 100px;
+        }
+
+        #number {
+            font-size: 150px;
+            border: 5px solid black;
+            display: inline-block;
+            width: 250px;
+            height: 200px;
+            line-height: 200px;
+            border-radius: 20px;
+        }
+
+        #number:hover {
+            cursor: pointer;
+        }
+
+        h2 {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Click on the number</h2>
+
+    <div id="number" onclick="stopstart()"></div>
+
+    <script>
+        var number;
+        var stopped = false;
+        var clicks = 0;
+        var t;
+
+        function change() {
+            var random = Math.floor(Math.random() * 100);
+            number.innerHTML = random;
+        }
+
+        function stopstart() {
+            clicks++;
+
+            if (clicks % 2 != 0) {
+                clearInterval(t);
+                stopped = true;
+            } else {
+                stopped = false;
+                t = setInterval(change, 100);
+            }
+        }
+
+        window.onload = function () {
+            number = document.getElementById("number");
+            t = setInterval(change, 100);
+        }
+    </script>
+
+</body>
+
+</html>
