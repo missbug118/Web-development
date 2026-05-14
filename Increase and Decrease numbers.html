@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            margin-top: 100px;
+        }
+
+        .wrapper {
+            width: 300px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 60px;
+        }
+
+        #count {
+            font-size: 80px;
+            margin: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <h1>Counter App</h1>
+
+        <p id="count">0</p>
+
+        <button id="button-increase">Increase</button>
+        <button id="button-decrease">Decrease</button>
+        <button id="button-reset">Reset</button>
+    </div>
+
+    <script>
+
+        window.onload = function () {
+
+            var count = 0;
+
+            var display = document.getElementById("count");
+
+            var buttonIncrease = document.getElementById("button-increase");
+
+            var buttonDecrease = document.getElementById("button-decrease");
+
+            var buttonReset = document.getElementById("button-reset");
+
+            buttonIncrease.onclick = function () {
+                count++;
+                display.innerHTML = count;
+            }
+
+            buttonDecrease.onclick = function () {
+                count--;
+                display.innerHTML = count;
+            }
+
+            buttonReset.onclick = function () {
+                count = 0;
+                display.innerHTML = count;
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
