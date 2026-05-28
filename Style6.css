@@ -1,0 +1,109 @@
+.pimg1, .pimg2, .pimg3 {
+
+position: relative;
+
+opacity: 0.70;
+
+background-position: center;
+
+background-size: cover;
+
+background-repeat: no-repeat;
+
+background-attachment: fixed;
+
+}
+
+.pimg1 {
+
+background-image: url('https://c4.wallpaperflare.com/wallpaper/323/261/154/background-hd-nature-pics-1920x1200-wallpaper-preview.jpg');
+
+min-height: 100vh;
+
+}
+
+.pimg2 {
+
+background-image: url('https://static.vecteezy.com/system/resources/thumbnails/069/450/668/small/a-beautiful-waterfall-in-the-middle-of-the-forest-with-water-as-clear-as-emeralds-free-video.jpg');
+
+min-height: 400px;
+
+}
+
+.pimg3 {
+
+background-image: url('https://thumbs.dreamstime.com/b/amazing-view-nature-pics-whit-beautiful-sunset-93349702.jpg');
+
+min-height: 400px;
+
+}
+
+.section {
+
+text-align: center;
+
+padding: 50px 80px;
+
+}
+
+.section-light {
+
+background-color: #f4f4f4;
+
+color: #666;
+
+}
+
+.section-dark {
+
+background-color: darkolivegreen;
+
+color: #ddd;
+
+}
+
+.ptext {
+
+position: absolute;
+
+top: 50%;
+
+width: 100%;
+
+text-align: center;
+
+color: #000;
+
+font-size: 30px;
+
+letter-spacing: 10px;
+
+text-transform: uppercase;
+
+}
+
+.ptext .border {
+
+background-color: beige;
+
+color: black;
+
+padding: 20px;
+
+}
+
+.ptext .border.trans {
+
+background-color: transparent;
+
+}
+
+@media(max-width:579px){
+
+.pimg1, .pimg2, .pimg3 {
+
+background-attachment: scroll;
+
+}
+
+}
